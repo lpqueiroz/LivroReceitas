@@ -13,13 +13,20 @@ export class RecipeListComponent implements OnInit {
     new Recipe('Outra Receita teste', 'Isso é apenas um teste', 'https://assets.bonappetit.com/photos/60a4022a248102a01bcfa0b6/1:1/w_960,c_limit/0621-Sheet-Pan-Gnocchi.jpg')
   ];
 
-  constructor() { }
+  constructor() { 
+    console.log('constructor de recipe-list foi chamado');
+  }
 
   ngOnInit(): void {
+    console.log('ngOnInit de recipe-list foi chamado');
   }
 
   onRecipeSelected(recipe: Recipe) {
     this.recipeWasSelected.emit(recipe);
+  }
+
+  destruirCompRecipeItem() {
+    this.recipes.splice(0, 2);
   }
 
 }
