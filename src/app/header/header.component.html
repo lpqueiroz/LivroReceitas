@@ -7,8 +7,9 @@
 
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#" (click)="onSelect('recipe')">Receitas</a></li>
-                <li><a href="#" (click)="onSelect('shopping-list')">Lista de Compras</a></li>
+                <li routerLinkActive="active"><a routerLink="receitas"
+                     (click)="onSelect('recipe')">Receitas</a></li>
+                <li routerLinkActive="active"><a routerLink="lista-de-compras" (click)="onSelect('shopping-list')">Lista de Compras</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" appDropdown>
