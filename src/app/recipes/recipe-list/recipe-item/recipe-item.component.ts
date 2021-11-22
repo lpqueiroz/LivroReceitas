@@ -12,9 +12,7 @@ export class RecipeItemComponent implements OnInit, OnChanges, OnDestroy {
   @Input() recipe!: Recipe;
   // @Output() recipeSelected = new EventEmitter<void>();
 
-  constructor(
-    private recipeService: RecipeService
-  ) {
+  constructor() {
     console.log('construtor foi chamado');
   }
 
@@ -30,10 +28,4 @@ export class RecipeItemComponent implements OnInit, OnChanges, OnDestroy {
   ngOnDestroy() {
     console.log('ngOnDestroy foi chamado!');
   }
-
-  onSelected() {
-    // this.recipeSelected.emit();
-    this.recipeService.recipeSelected.emit(this.recipe);
-  }
-
 }
