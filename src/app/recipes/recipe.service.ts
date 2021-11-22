@@ -15,8 +15,8 @@ export class RecipeService {
         return this.recipes.slice();
     }
 
-    getRecipe(index: number) {
-        return this.recipes[index];
+    getRecipe(index: number) { //0
+        return this.recipes[index]; // recipes[0]
     }
 
 }
